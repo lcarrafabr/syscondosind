@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="938.0" style="-fx-background-color: #ffffff;" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.CondominiosViewController">
+   <children>
+      <VBox layoutX="265.0" layoutY="68.0" prefHeight="607.0" prefWidth="938.0" styleClass="fundo-branco" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="53.0" prefWidth="938.0" styleClass="hbox-menu">
+               <children>
+                  <ToolBar prefHeight="53.0" prefWidth="895.0" styleClass="hbox-menu">
+                     <items>
+                        <JFXButton fx:id="btnBuscar" onAction="#buscarOnAction" prefHeight="43.0" prefWidth="66.0" styleClass="button-topo" text="Buscar" />
+                        <JFXButton fx:id="btnNovo" layoutX="10.0" layoutY="10.0" onAction="#novoOnAction" prefHeight="43.0" prefWidth="66.0" styleClass="button-topo" text="Novo" />
+                        <JFXButton fx:id="btnEditar" layoutX="10.0" layoutY="10.0" onAction="#editarOnAction" prefHeight="43.0" prefWidth="66.0" styleClass="button-topo" text="Editar" />
+                        <JFXButton fx:id="btnSalvar" layoutX="80.0" layoutY="10.0" onAction="#salvarOnAction" prefHeight="43.0" prefWidth="66.0" styleClass="button-topo" text="Salvar" />
+                        <JFXButton fx:id="btnAlterar" layoutX="150.0" layoutY="10.0" onAction="#alterarOnAction" prefHeight="43.0" prefWidth="66.0" styleClass="button-topo" text="Alterar" />
+                        <JFXButton fx:id="btnExcluir" layoutX="220.0" layoutY="10.0" onAction="#excluirOnAction" prefHeight="43.0" prefWidth="66.0" styleClass="button-topo" text="Excluir" />
+                        <JFXButton fx:id="btnCancelar" layoutX="290.0" layoutY="10.0" onAction="#cancelarOnAction" prefHeight="43.0" prefWidth="66.0" styleClass="button-topo" text="Cancelar" />
+                        <JFXButton fx:id="btnLimpar" layoutX="360.0" layoutY="10.0" onAction="#limparOnAction" prefHeight="43.0" prefWidth="66.0" styleClass="button-topo" text="Limpar" />
+                     </items>
+                  </ToolBar>
+                  <JFXButton fx:id="btnSair" onAction="#sairOnAction" prefHeight="55.0" prefWidth="48.0" styleClass="button-sair" text="X" />
+               </children>
+            </HBox>
+            <Pane prefHeight="245.0" prefWidth="938.0" styleClass="pane-components">
+               <children>
+                  <JFXTextField fx:id="txtNomeCondominio" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="347.0" promptText="Nome do condomínio" />
+                  <JFXButton fx:id="btnCadastraPessoaCondominio" layoutX="370.0" layoutY="14.0" onAction="#cadastraPessoaCondominioOnAction" prefHeight="27.0" prefWidth="35.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/new.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXComboBox fx:id="comboDestinacao" focusColor="#34495e" labelFloat="true" layoutX="425.0" layoutY="14.0" prefHeight="25.0" prefWidth="166.0" promptText="Destinação" unFocusColor="#646262" />
+                  <JFXButton fx:id="btnCadastraDestinacao" layoutX="599.0" layoutY="13.0" onAction="#cadastraDestinacaoOnAction" prefHeight="27.0" prefWidth="35.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/new.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXComboBox fx:id="comboTipoCondominio" focusColor="#34495e" labelFloat="true" layoutX="655.0" layoutY="14.0" prefHeight="25.0" prefWidth="166.0" promptText="Tipo condomínio" unFocusColor="#646363" />
+                  <JFXButton fx:id="btnCadastraTipoCondominio" layoutX="829.0" layoutY="14.0" onAction="#cadastraTipoCondominioOnAction" prefHeight="27.0" prefWidth="35.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/new.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtCNPJ" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="51.0" onKeyReleased="#cnpjKeyReleased" prefHeight="25.0" prefWidth="166.0" promptText="CNPJ" />
+                  <JFXTextField fx:id="txtInscricaoEstadual" focusColor="#34495e" labelFloat="true" layoutX="195.0" layoutY="51.0" onKeyReleased="#inscricaoMunicipalKeyReleades" prefHeight="25.0" prefWidth="166.0" promptText="Inscrição municipal" />
+                  <Separator layoutX="14.0" layoutY="87.0" prefHeight="8.0" prefWidth="912.0" />
+                  <Label layoutX="14.0" layoutY="95.0" text="Endereço" />
+                  <JFXTextField fx:id="txtCEP" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="123.0" onKeyReleased="#cepKeyReleased" prefHeight="25.0" prefWidth="113.0" promptText="CEP" />
+                  <JFXButton fx:id="btnConsultaCEP" layoutX="133.0" layoutY="122.0" onAction="#consultaCepOnAction" prefHeight="27.0" prefWidth="35.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtLogradouro" focusColor="#34495e" labelFloat="true" layoutX="195.0" layoutY="123.0" prefHeight="25.0" prefWidth="398.0" promptText="Logradouro" />
+                  <JFXTextField fx:id="txtNumero" focusColor="#34495e" labelFloat="true" layoutX="655.0" layoutY="123.0" prefHeight="25.0" prefWidth="66.0" promptText="Número" />
+                  <JFXTextField fx:id="txtBairro" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="166.0" prefHeight="25.0" prefWidth="166.0" promptText="Bairro" />
+                  <JFXTextField fx:id="txtCidade" focusColor="#34495e" labelFloat="true" layoutX="195.0" layoutY="166.0" prefHeight="25.0" prefWidth="166.0" promptText="Cidade" />
+                  <JFXComboBox fx:id="comboUF" focusColor="#34495e" labelFloat="true" layoutX="370.0" layoutY="166.0" prefHeight="25.0" prefWidth="66.0" promptText="UF" />
+                  <JFXTextField fx:id="txtEstado" editable="false" focusColor="#34495e" labelFloat="true" layoutX="441.0" layoutY="166.0" prefHeight="25.0" prefWidth="151.0" promptText="Estado" />
+                  <JFXTextField fx:id="txtCOmplemento" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="205.0" prefHeight="25.0" prefWidth="583.0" promptText="Complemento" />
+               </children>
+               <VBox.margin>
+                  <Insets left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Pane>
+            <TableView fx:id="gradeCondominio" onMouseClicked="#gradeCondominioOnMouseClicked" prefHeight="262.0" prefWidth="938.0">
+              <columns>
+                <TableColumn fx:id="colCodigoPessoaCondominio" prefWidth="75.0" text="Id#" />
+                <TableColumn fx:id="colNomeCondominio" prefWidth="672.0" text="Condomínio" />
+                  <TableColumn fx:id="colCNPJ" minWidth="0.0" prefWidth="188.0" text="CNPJ" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="1.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/StyleBotoesMenu.css" />
+      <URL value="@../Style/StyleBorderPane.css" />
+      <URL value="@../Style/StyleComponents.css" />
+   </stylesheets>
+</AnchorPane>

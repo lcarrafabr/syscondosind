@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="299.0" prefWidth="600.0" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.TiposFornecedoresViewController">
+   <children>
+      <VBox layoutX="117.0" layoutY="56.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="44.0" prefWidth="600.0" styleClass="hbox-menu">
+               <children>
+                  <HBox prefHeight="47.0" prefWidth="554.0" styleClass="hbox-menu">
+                     <children>
+                        <JFXButton fx:id="btnBuscar" onAction="#buscarOnAction" prefHeight="44.0" prefWidth="59.0" styleClass="button-topo" text="Buscar" />
+                        <JFXButton fx:id="btnNovo" layoutX="10.0" layoutY="10.0" onAction="#novoOnAction" prefHeight="44.0" prefWidth="59.0" styleClass="button-topo" text="Novo" />
+                        <JFXButton fx:id="btnEditar" layoutX="10.0" layoutY="10.0" onAction="#editarOnAction" prefHeight="44.0" prefWidth="59.0" styleClass="button-topo" text="Editar" />
+                        <JFXButton fx:id="btnSalvar" layoutX="69.0" layoutY="10.0" onAction="#salvarOnAction" prefHeight="44.0" prefWidth="59.0" styleClass="button-topo" text="Salvar" />
+                        <JFXButton fx:id="btnAlterar" layoutX="128.0" layoutY="10.0" onAction="#alterarOnAction" prefHeight="44.0" prefWidth="59.0" styleClass="button-topo" text="Alterar" />
+                        <JFXButton fx:id="btnExcluir" layoutX="187.0" layoutY="10.0" onAction="#excluirOnAction" prefHeight="44.0" prefWidth="59.0" styleClass="button-topo" text="Excluir" />
+                        <JFXButton fx:id="btnCancelar" layoutX="246.0" layoutY="10.0" onAction="#cancelarOnAction" prefHeight="44.0" prefWidth="66.0" styleClass="button-topo" text="Cancelar" />
+                        <JFXButton fx:id="btnLimpar" layoutX="305.0" layoutY="10.0" onAction="#limparOnAction" prefHeight="44.0" prefWidth="59.0" styleClass="button-topo" text="Limpar" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnSair" onAction="#sairOnAction" prefHeight="45.0" prefWidth="49.0" styleClass="button-sair" text="X" />
+               </children>
+            </HBox>
+            <Pane prefHeight="69.0" prefWidth="600.0">
+               <children>
+                  <JFXTextField fx:id="txtNomeTipoFornecedor" labelFloat="true" layoutX="14.0" layoutY="22.0" prefHeight="25.0" prefWidth="290.0" promptText="Tipo fornecedor" />
+                  <JFXComboBox fx:id="comboGrupoFornecedor" labelFloat="true" layoutX="316.0" layoutY="22.0" prefHeight="25.0" prefWidth="215.0" promptText="Grupo fornecedor" />
+                  <JFXButton layoutX="534.0" layoutY="22.0" onAction="#cadastrarGrupoFornOnAction" prefHeight="25.0" prefWidth="48.0">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/NEW_02.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <TableView fx:id="gradeTipoFornecedor" onMouseClicked="#gradeTipoFornOnMouseClicked" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="Id#" visible="false" />
+                <TableColumn fx:id="colTipoFornecedor" prefWidth="352.0" text="Tipo fornecedor" />
+                  <TableColumn fx:id="colGrupo" prefWidth="242.0" text="Grupo" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/StyleComponents.css" />
+      <URL value="@../Style/StyleBotoesMenu.css" />
+      <URL value="@../Style/StyleBorderPane.css" />
+   </stylesheets>
+</AnchorPane>

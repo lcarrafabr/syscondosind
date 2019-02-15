@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.ApartamentosViewController">
+   <children>
+      <VBox prefHeight="351.0" prefWidth="723.0">
+         <children>
+            <HBox prefHeight="45.0" prefWidth="842.0" styleClass="hbox-menu">
+               <children>
+                  <HBox prefHeight="45.0" prefWidth="689.0" styleClass="hbox-menu">
+                     <children>
+                        <JFXButton fx:id="btnBuscar" onAction="#buscarOnAction" prefHeight="51.0" prefWidth="76.0" styleClass="button-topo" text="Buscar" />
+                        <JFXButton fx:id="btnNovo" layoutX="10.0" layoutY="10.0" onAction="#novoOnAction" prefHeight="51.0" prefWidth="76.0" styleClass="button-topo" text="Novo" />
+                        <JFXButton fx:id="btnEditar" layoutX="10.0" layoutY="10.0" onAction="#editarOnAction" prefHeight="51.0" prefWidth="76.0" styleClass="button-topo" text="Editar" />
+                        <JFXButton fx:id="btnSalvar" layoutX="86.0" layoutY="10.0" onAction="#salvarOnAction" prefHeight="51.0" prefWidth="76.0" styleClass="button-topo" text="Salvar" />
+                        <JFXButton fx:id="btnSalvarMais" layoutX="162.0" layoutY="10.0" onAction="#salvarMaisOnAction" prefHeight="51.0" prefWidth="76.0" styleClass="button-topo" text="Salvar+" />
+                        <JFXButton fx:id="btnAlterar" layoutX="238.0" layoutY="10.0" onAction="#alterarOnAction" prefHeight="51.0" prefWidth="76.0" styleClass="button-topo" text="Alterar" />
+                        <JFXButton fx:id="btnExcluir" layoutX="314.0" layoutY="10.0" onAction="#excluirOnAction" prefHeight="51.0" prefWidth="76.0" styleClass="button-topo" text="Excluir" />
+                        <JFXButton fx:id="btnCancelar" layoutX="390.0" layoutY="10.0" onAction="#cancelarOnAction" prefHeight="51.0" prefWidth="76.0" styleClass="button-topo" text="Cancelar" />
+                        <JFXButton fx:id="btnLimpar" layoutX="542.0" layoutY="10.0" onAction="#limparOnAction" prefHeight="51.0" prefWidth="76.0" styleClass="button-topo" text="Limpar" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnSair" onAction="#sairOnAction" prefHeight="45.0" prefWidth="57.0" styleClass="button-sair" text="X" />
+               </children>
+            </HBox>
+            <Pane prefHeight="75.0" prefWidth="714.0" styleClass="pane-components">
+               <children>
+                  <JFXTextField fx:id="txtNomeApto" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="330.0" promptText="Identificação do Apto/Casa/Setor" />
+                  <JFXComboBox fx:id="comboPossuiCobertura" labelFloat="true" layoutX="357.0" layoutY="14.0" prefHeight="25.0" prefWidth="107.0" promptText="Possui cobertura" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Pane>
+            <TableView fx:id="gradeApartamento" onMouseClicked="#gradeAptoOnMouseClicked" prefHeight="228.0" prefWidth="714.0">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="83.0" text="Id#" />
+                  <TableColumn fx:id="colNomeTorre" prefWidth="529.0" text="Nome Apartamento" />
+                  <TableColumn fx:id="colPossuiCobertura" prefWidth="102.0" text="Possui cobertura" />
+               </columns>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/StyleBotoesMenu.css" />
+      <URL value="@../Style/StyleBorderPane.css" />
+      <URL value="@../Style/StyleComponents.css" />
+   </stylesheets>
+</AnchorPane>

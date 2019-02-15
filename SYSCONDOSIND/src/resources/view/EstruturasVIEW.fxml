@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="696.0" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.EstruturasVIEWController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="671.0" prefWidth="1055.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="45.0" prefWidth="1055.0" styleClass="hbox-menu">
+               <children>
+                  <HBox prefHeight="45.0" prefWidth="660.0" styleClass="hbox-menu" stylesheets="@../Style/StyleBorderPane.css">
+                     <children>
+                        <JFXButton fx:id="btnBuscar" onAction="#buscarOnAction" prefHeight="45.0" prefWidth="76.0" styleClass="button-topo" text="Buscar" />
+                        <JFXButton fx:id="btnNovo" layoutX="10.0" layoutY="10.0" onAction="#novoOnAction" prefHeight="45.0" prefWidth="76.0" styleClass="button-topo" text="Novo" />
+                        <JFXButton fx:id="btnEditar" layoutX="10.0" layoutY="10.0" onAction="#editarOnAction" prefHeight="45.0" prefWidth="76.0" styleClass="button-topo" text="Editar" />
+                        <JFXButton fx:id="btnSalvar" layoutX="86.0" layoutY="10.0" onAction="#salvarOnAction" prefHeight="45.0" prefWidth="76.0" styleClass="button-topo" text="Salvar" />
+                        <JFXButton fx:id="btnAlterar" layoutX="162.0" layoutY="10.0" onAction="#alterarOnAction" prefHeight="45.0" prefWidth="76.0" styleClass="button-topo" text="Alterar" />
+                        <JFXButton fx:id="btnExcluir" layoutX="238.0" layoutY="10.0" onAction="#excluirOnAction" prefHeight="45.0" prefWidth="76.0" styleClass="button-topo" text="Excluir" />
+                        <JFXButton fx:id="btnCancelar" layoutX="314.0" layoutY="10.0" onAction="#cancelarOnAction" prefHeight="45.0" prefWidth="76.0" styleClass="button-topo" text="Cancelar" />
+                        <JFXButton fx:id="btnLimpar" layoutX="390.0" layoutY="10.0" onAction="#limparOnAction" prefHeight="45.0" prefWidth="76.0" styleClass="button-topo" text="Limpar" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnSair" onAction="#sairOnAction" prefHeight="47.0" prefWidth="52.0" styleClass="button-sair" text="X" />
+               </children>
+            </HBox>
+            <Pane prefHeight="455.0" prefWidth="1043.0" styleClass="pane-components" stylesheets="@../Style/StyleBorderPane.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Informaçõe sobre a estrutura:" textFill="#8a8686">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXCheckBox fx:id="checkBoxPossuiPortaria" layoutX="14.0" layoutY="43.0" prefHeight="18.0" prefWidth="120.0" text="Possui portaria" />
+                  <JFXCheckBox fx:id="checkBoxPossuiElevador" layoutX="165.0" layoutY="43.0" text="Possui elevador" />
+                  <JFXCheckBox fx:id="checkBoxPossuiCercaEletrica" layoutX="306.0" layoutY="43.0" text="Possui cerca elétrica" />
+                  <JFXCheckBox fx:id="checkBoxPossuiTVFechado" layoutX="460.0" layoutY="43.0" text="Possui circuito fechado de TV" />
+                  <JFXTextField fx:id="txtQTDApto" labelFloat="true" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="120.0" promptText="Qtd de Apto" />
+                  <JFXTextField fx:id="txtQTDCobertura" labelFloat="true" layoutX="165.0" layoutY="85.0" prefHeight="25.0" prefWidth="108.0" promptText="Qtd de Coberturas" />
+                  <JFXComboBox fx:id="comboTipoPortaria" labelFloat="true" layoutX="306.0" layoutY="85.0" prefHeight="25.0" prefWidth="131.0" promptText="Tipo de portaria" />
+                  <JFXComboBox fx:id="comboFuncionamentoPortaria" labelFloat="true" layoutX="460.0" layoutY="85.0" prefHeight="25.0" prefWidth="180.0" promptText="Funcionamento da portaria" />
+                  <JFXTextField fx:id="txtVagasGaragem" labelFloat="true" layoutX="14.0" layoutY="140.0" prefHeight="25.0" prefWidth="120.0" promptText="Vagas de garagem" />
+                  <JFXTextField fx:id="txtQTDElevadores" labelFloat="true" layoutX="165.0" layoutY="140.0" prefHeight="25.0" prefWidth="108.0" promptText="Qtd elevadores" />
+                  <JFXTextField fx:id="txtConstrutora" labelFloat="true" layoutX="304.0" layoutY="140.0" prefHeight="25.0" prefWidth="131.0" promptText="Construtora" />
+                  <JFXTextField fx:id="txtAnoConstrucao" labelFloat="true" layoutX="460.0" layoutY="140.0" prefHeight="25.0" prefWidth="180.0" promptText="Ano de construção (AAAA)" />
+                  <Separator layoutX="14.0" layoutY="184.0" prefHeight="7.0" prefWidth="664.0" />
+                  <Label layoutX="14.0" layoutY="191.0" text="Possui:" textFill="#8a8686">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXCheckBox fx:id="checkBoxSalaoFesta" layoutX="14.0" layoutY="227.0" prefHeight="18.0" prefWidth="120.0" text="Salão de Festas" />
+                  <JFXCheckBox fx:id="checkBoxPlayGround" layoutX="165.0" layoutY="227.0" prefHeight="18.0" prefWidth="108.0" text="Playground" />
+                  <JFXCheckBox fx:id="checkBoxAguaIndividualizada" layoutX="304.0" layoutY="227.0" prefHeight="18.0" prefWidth="131.0" text="Água indivualizada" />
+                  <JFXCheckBox fx:id="checkBoxPiscina" layoutX="460.0" layoutY="227.0" prefHeight="18.0" prefWidth="180.0" text="Piscina" />
+                  <JFXCheckBox fx:id="checkBoxPortaoEletronico" layoutX="14.0" layoutY="261.0" prefHeight="18.0" prefWidth="120.0" text="Portão eletrônico" />
+                  <JFXCheckBox fx:id="checkBoxGasEncanado" layoutX="165.0" layoutY="261.0" prefHeight="18.0" prefWidth="108.0" text="Gás encanado" />
+                  <JFXCheckBox fx:id="checkBoxColetaSeletivaLixo" layoutX="304.0" layoutY="261.0" prefHeight="18.0" prefWidth="143.0" text="Coleta seletiva de lixo" />
+                  <JFXCheckBox fx:id="checkBoxColetaOleoCozinha" layoutX="460.0" layoutY="261.0" prefHeight="18.0" prefWidth="180.0" text="Coleta de óleo de cozinha" />
+                  <TextArea fx:id="txtDescricao" layoutX="14.0" layoutY="335.0" prefHeight="112.0" prefWidth="664.0" promptText="Descreva aqui os diferenciais do condomínio como por exemplo: sala de ginastica, salão de jogos, SPA" />
+                  <JFXTextField fx:id="txtTaxaCondominio" labelFloat="true" layoutX="14.0" layoutY="301.0" prefHeight="25.0" prefWidth="120.0" promptText="Taxa de condomínio" />
+                  <JFXTextField fx:id="txtValorFundoReserva" labelFloat="true" layoutX="165.0" layoutY="301.0" prefHeight="25.0" prefWidth="131.0" promptText="Valor fundo de reserva" />
+                  <JFXComboBox fx:id="comboTipoGaragem" labelFloat="true" layoutX="306.0" layoutY="301.0" prefHeight="25.0" prefWidth="131.0" promptText="Tipo garagem" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Pane>
+            <TableView fx:id="gradeCondominio" onMouseClicked="#gradeCondominioOnMouseClicked" prefHeight="170.0" prefWidth="1055.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="Id#" />
+                <TableColumn fx:id="colNomeCondominio" prefWidth="620.0" text="Condomínio" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/StyleBotoesMenu.css" />
+      <URL value="@../Style/StyleBorderPane.css" />
+      <URL value="@../Style/StyleComponents.css" />
+   </stylesheets>
+</AnchorPane>

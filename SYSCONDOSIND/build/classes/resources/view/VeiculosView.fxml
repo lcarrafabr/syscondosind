@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="615.0" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.VeiculosViewController">
+   <children>
+      <VBox layoutX="180.0" layoutY="73.0" prefHeight="514.0" prefWidth="790.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="46.0" prefWidth="790.0" styleClass="hbox-menu">
+               <children>
+                  <HBox prefHeight="46.0" prefWidth="570.0" styleClass="hbox-menu">
+                     <children>
+                        <JFXButton fx:id="btnBuscar" onAction="#buscarOnAction" prefHeight="46.0" prefWidth="69.0" styleClass="button-topo" text="Buscar" />
+                        <JFXButton fx:id="btnNovo" layoutX="10.0" layoutY="10.0" onAction="#novoOnAction" prefHeight="46.0" prefWidth="69.0" styleClass="button-topo" text="Novo" />
+                        <JFXButton fx:id="btnEditar" layoutX="10.0" layoutY="10.0" onAction="#editarOnAction" prefHeight="46.0" prefWidth="69.0" styleClass="button-topo" text="Editar" />
+                        <JFXButton fx:id="btnSalvar" layoutX="79.0" layoutY="10.0" onAction="#salvarOnAction" prefHeight="46.0" prefWidth="69.0" styleClass="button-topo" text="Salvar" />
+                        <JFXButton fx:id="btnAlterar" layoutX="148.0" layoutY="10.0" onAction="#alterarOnAction" prefHeight="46.0" prefWidth="69.0" styleClass="button-topo" text="Alterar" />
+                        <JFXButton fx:id="btnExcluir" layoutX="217.0" layoutY="10.0" onAction="#excluirOnAction" prefHeight="46.0" prefWidth="69.0" styleClass="button-topo" text="Excluir" />
+                        <JFXButton fx:id="btnCancelar" layoutX="286.0" layoutY="10.0" onAction="#cancelarOnAction" prefHeight="46.0" prefWidth="69.0" styleClass="button-topo" text="Cancelar" />
+                        <JFXButton fx:id="btnLimpar" layoutX="355.0" layoutY="10.0" onAction="#limparOnAction" prefHeight="46.0" prefWidth="69.0" styleClass="button-topo" text="Limpar" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnSair" onAction="#sairOnAction" prefHeight="48.0" prefWidth="43.0" styleClass="button-sair" text="X" />
+               </children>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="txtMorador" editable="false" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="26.0" prefHeight="25.0" prefWidth="560.0" promptText="Nome morador" />
+                  <Label layoutX="14.0" layoutY="62.0" text="Dados do veículo" />
+                  <JFXTextField fx:id="txtMarca" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="100.0" prefHeight="25.0" prefWidth="208.0" promptText="Marca" />
+                  <JFXTextField fx:id="txtModelo" focusColor="#34495e" labelFloat="true" layoutX="235.0" layoutY="100.0" prefHeight="25.0" prefWidth="208.0" promptText="Modelo" />
+                  <JFXTextField fx:id="txtPlaca" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="148.0" prefHeight="25.0" prefWidth="208.0" promptText="Placa" />
+                  <JFXColorPicker fx:id="colorCor" layoutX="351.0" layoutY="148.0" prefHeight="25.0" prefWidth="92.0" promptText="Selecione a cor" />
+                  <JFXTextField fx:id="txtAno" focusColor="#34495e" labelFloat="true" layoutX="235.0" layoutY="148.0" onKeyReleased="#anoKeyReleased" prefHeight="25.0" prefWidth="92.0" promptText="Ano" />
+               </children>
+               <styleClass>
+                  <String fx:value="fundo-branco" />
+                  <String fx:value="pane-components" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Pane>
+            <TableView fx:id="gradeVeiculos" onMouseClicked="#gradeVeiculosMouseClicked" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="Id#" visible="false" />
+                <TableColumn fx:id="colMorador" prefWidth="269.0" text="Morador" />
+                  <TableColumn fx:id="colMarca" prefWidth="146.0" text="Marca" />
+                  <TableColumn fx:id="colModelo" prefWidth="87.0" text="Modelo" />
+                  <TableColumn fx:id="colPlaca" prefWidth="60.0" text="Placa" />
+                  <TableColumn fx:id="colAno" prefWidth="46.0" text="Ano" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/StyleBotoesMenu.css" />
+      <URL value="@../Style/StyleBorderPane.css" />
+      <URL value="@../Style/StyleComponents.css" />
+   </stylesheets>
+</AnchorPane>

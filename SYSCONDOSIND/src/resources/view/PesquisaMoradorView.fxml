@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="311.0" prefWidth="600.0" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.PesquisaMoradorViewController">
+   <children>
+      <VBox layoutX="146.0" layoutY="49.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="42.0" prefWidth="600.0" styleClass="hbox-menu">
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="556.0" styleClass="hbox-menu">
+                     <children>
+                        <JFXButton fx:id="btnCadastraMorador" alignment="CENTER" onAction="#cadastraMoradorOnAction" prefHeight="42.0" prefWidth="127.0" styleClass="button-topo" text="Cadastrar Morador" textAlignment="CENTER" wrapText="true" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnSair" onAction="#sairOnAction" prefHeight="43.0" prefWidth="48.0" styleClass="button-sair" text="X" />
+               </children>
+            </HBox>
+            <Pane prefHeight="65.0" prefWidth="600.0">
+               <children>
+                  <JFXTextField fx:id="txtPesquisaMorador" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="20.0" onKeyReleased="#pesquisaMoradorOnKeyReleased" prefHeight="25.0" prefWidth="554.0" promptText="Pesquisar morador" />
+               </children>
+               <styleClass>
+                  <String fx:value="fundo-branco" />
+                  <String fx:value="pane-components" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Pane>
+            <TableView fx:id="gradePesquisaMorador" onMouseClicked="#gradePesquisaMoradorOnMouseClicked" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="Id#" visible="false" />
+                  <TableColumn fx:id="colIdPessoa" prefWidth="68.0" text="Id# pessoa" visible="false" />
+                <TableColumn fx:id="colNomeMorador" prefWidth="588.0" text="Morador" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/StyleBotoesMenu.css" />
+      <URL value="@../Style/StyleBorderPane.css" />
+      <URL value="@../Style/StyleComponents.css" />
+   </stylesheets>
+</AnchorPane>

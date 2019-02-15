@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../Style/StyleDesktop.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.DesktopViewController">
+   <children>
+      <AnchorPane layoutX="38.0" layoutY="31.0" prefHeight="728.0" prefWidth="225.0" style="-fx-background-color: #425D77;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutY="114.0" prefHeight="508.0" prefWidth="225.0">
+               <children>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#cadastrosOnAction" prefHeight="46.0" prefWidth="225.0" text="Cadastros" textFill="#ebeaea">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SERVER" />
+                     </graphic></JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" onAction="#garavemVeiculoOnAction" prefHeight="46.0" prefWidth="225.0" text="Garagem / veículos" textFill="#f5f5f5">
+                     <graphic>
+                        <FontAwesomeIconView fill="#f8f8f8" glyphName="CAR" />
+                     </graphic></JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="56.0" onAction="#financeiroOnAction" prefHeight="46.0" prefWidth="225.0" text="Financeiro" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USD" />
+                     </graphic></JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="102.0" onAction="#forcenedorPedidoOnAction" prefHeight="46.0" prefWidth="225.0" text="Fornecedores / Pedidos" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="#f8f8f8" glyphName="CUBE" />
+                     </graphic></JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="148.0" prefHeight="46.0" prefWidth="225.0" />
+                  <JFXButton layoutX="10.0" layoutY="194.0" prefHeight="46.0" prefWidth="225.0" />
+                  <JFXButton layoutX="10.0" layoutY="240.0" prefHeight="46.0" prefWidth="225.0" />
+               </children>
+            </VBox>
+            <Label alignment="CENTER" prefHeight="114.0" prefWidth="225.0" text="Logo" textFill="#fffdfd">
+               <font>
+                  <Font size="47.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="459.0" layoutY="447.0" prefHeight="29.0" prefWidth="1280.0" style="-fx-background-color: #ffffff; -fx-border-color: #69797E;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <MenuBar layoutX="225.0" layoutY="2.0" prefHeight="29.0" prefWidth="1055.0" style="-fx-background-color: #3C556C;" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Arquivo">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="desktopPane" layoutX="225.0" layoutY="29.0" prefHeight="671.0" prefWidth="1055.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0" />
+   </children>
+</AnchorPane>

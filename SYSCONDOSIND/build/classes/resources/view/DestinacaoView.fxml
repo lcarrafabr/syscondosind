@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="598.0" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.DestinacaoViewController">
+   <children>
+      <VBox layoutX="278.0" layoutY="103.0" prefHeight="522.0" prefWidth="796.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="47.0" prefWidth="796.0" styleClass="hbox-menu">
+               <children>
+                  <ToolBar prefHeight="47.0" prefWidth="574.0" styleClass="hbox-menu">
+                     <items>
+                        <JFXButton fx:id="btnBuscar" onAction="#buscarOnAction" prefHeight="37.0" prefWidth="63.0" styleClass="button-topo" text="Buscar" />
+                        <JFXButton fx:id="btnNovo" layoutX="10.0" layoutY="10.0" onAction="#novoOnAction" prefHeight="37.0" prefWidth="63.0" styleClass="button-topo" text="Novo" />
+                        <JFXButton fx:id="btnSalvar" layoutX="10.0" layoutY="10.0" onAction="#salvarOnAction" prefHeight="37.0" prefWidth="63.0" styleClass="button-topo" text="Salvar" />
+                        <JFXButton fx:id="btnEditar" layoutX="77.0" layoutY="10.0" onAction="#editarOnAction" prefHeight="37.0" prefWidth="63.0" styleClass="button-topo" text="Editar" />
+                        <JFXButton fx:id="btnAlterar" layoutX="144.0" layoutY="10.0" onAction="#alterarOnAction" prefHeight="37.0" prefWidth="63.0" styleClass="button-topo" text="Alterar" />
+                        <JFXButton fx:id="btnExcluir" layoutX="211.0" layoutY="10.0" onAction="#excluirOnAction" prefHeight="37.0" prefWidth="63.0" styleClass="button-topo" text="Excluir" />
+                        <JFXButton fx:id="btnCancelar" layoutX="278.0" layoutY="10.0" onAction="#cancelarOnAction" prefHeight="37.0" prefWidth="63.0" styleClass="button-topo" text="Cancelar" />
+                        <JFXButton fx:id="btnLimpar" layoutX="345.0" layoutY="10.0" onAction="#limparOnAction" prefHeight="37.0" prefWidth="63.0" styleClass="button-topo" text="Limpar" />
+                     </items>
+                  </ToolBar>
+                  <JFXButton fx:id="btnSair" onAction="#sairOnAction" prefHeight="47.0" prefWidth="39.0" styleClass="button-sair" text="X" />
+               </children>
+            </HBox>
+            <Pane prefHeight="65.0" prefWidth="598.0">
+               <children>
+                  <JFXTextField fx:id="txtDestinacao" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="528.0" promptText="Destinação" />
+               </children>
+            </Pane>
+            <TableView fx:id="gradeDestinacao" onMouseClicked="#gradeDestinacaoMouseClicked" prefHeight="232.0" prefWidth="796.0">
+              <columns>
+                <TableColumn fx:id="colIdDestinacao" prefWidth="75.0" text="Id#" />
+                <TableColumn fx:id="colTipoDestinacao" prefWidth="522.0" text="Destinação" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="3.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/StyleBotoesMenu.css" />
+      <URL value="@../Style/StyleBorderPane.css" />
+      <URL value="@../Style/StyleComponents.css" />
+   </stylesheets>
+</AnchorPane>

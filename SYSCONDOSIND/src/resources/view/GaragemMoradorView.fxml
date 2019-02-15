@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="1012.0" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.GaragemMoradorViewController">
+   <children>
+      <VBox layoutX="105.0" layoutY="58.0" prefHeight="543.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="44.0" prefWidth="1012.0" styleClass="hbox-menu">
+               <children>
+                  <HBox prefHeight="44.0" prefWidth="971.0" styleClass="hbox-menu">
+                     <children>
+                        <JFXButton fx:id="btnBuscar" onAction="#buscarOnAction" prefHeight="44.0" prefWidth="64.0" styleClass="button-topo" text="Buscar" />
+                        <JFXButton fx:id="btnNovo" layoutX="10.0" layoutY="10.0" onAction="#novoOnAction" prefHeight="44.0" prefWidth="64.0" styleClass="button-topo" text="Novo" />
+                        <JFXButton fx:id="btnEditar" layoutX="10.0" layoutY="10.0" onAction="#editarEditarOnAction" prefHeight="44.0" prefWidth="64.0" styleClass="button-topo" text="Editar" />
+                        <JFXButton fx:id="btnSalvar" layoutX="74.0" layoutY="10.0" onAction="#salvarOnAction" prefHeight="44.0" prefWidth="64.0" styleClass="button-topo" text="Salvar" />
+                        <JFXButton fx:id="btnAlterar" layoutX="138.0" layoutY="10.0" onAction="#alterarOnAction" prefHeight="44.0" prefWidth="64.0" styleClass="button-topo" text="Alterar" />
+                        <JFXButton fx:id="btnExcluir" layoutX="202.0" layoutY="10.0" onAction="#excluirOnAction" prefHeight="44.0" prefWidth="64.0" styleClass="button-topo" text="Excluir" />
+                        <JFXButton fx:id="btnCancelar" layoutX="266.0" layoutY="10.0" onAction="#cancelarOnAction" prefHeight="44.0" prefWidth="64.0" styleClass="button-topo" text="Cancelar" />
+                        <JFXButton fx:id="btnLimpar" layoutX="330.0" layoutY="10.0" onAction="#limparOnAction" prefHeight="44.0" prefWidth="64.0" styleClass="button-topo" text="Limpar" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnSair" onAction="#sairOnAction" prefHeight="46.0" prefWidth="47.0" styleClass="button-sair" text="X" />
+               </children>
+            </HBox>
+            <HBox prefHeight="252.0" prefWidth="1012.0">
+               <children>
+                  <Pane prefHeight="201.0" prefWidth="694.0">
+                     <children>
+                        <JFXTextField fx:id="txtNomeMorador" editable="false" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="24.0" prefHeight="25.0" prefWidth="341.0" promptText="Usuário da vaga" />
+                        <JFXComboBox fx:id="comboVeiculo" focusColor="#34495e" labelFloat="true" layoutX="370.0" layoutY="24.0" prefHeight="25.0" prefWidth="261.0" promptText="Veículo" />
+                        <JFXButton layoutX="647.0" layoutY="24.0" onAction="#pesquisaVeiculoOnAction" prefHeight="28.0" prefWidth="44.0">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/search.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXComboBox fx:id="comboVaga" focusColor="#34495e" labelFloat="true" layoutX="14.0" layoutY="67.0" prefHeight="25.0" prefWidth="278.0" promptText="Vaga" />
+                        <JFXButton layoutX="306.0" layoutY="66.0" onAction="#pesquisaVagaOnAction" prefHeight="27.0" prefWidth="48.0">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/search.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXComboBox fx:id="comboTipoVaga" focusColor="#34495e" labelFloat="true" layoutX="370.0" layoutY="67.0" prefHeight="25.0" prefWidth="261.0" promptText="Tipo de vaga" />
+                        <TextArea fx:id="txtAreaObservacao" layoutX="14.0" layoutY="115.0" prefHeight="104.0" prefWidth="625.0" promptText="Observação" wrapText="true" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="fundo-branco" />
+                        <String fx:value="pane-components" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane prefHeight="252.0" prefWidth="316.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-3.0" layoutY="-2.0" prefHeight="25.0" prefWidth="324.0" text="Informações gerais da garagem" textFill="#838282">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="9.0" layoutY="23.0" prefHeight="221.0" prefWidth="298.0" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+                           <styleClass>
+                              <String fx:value="fundo-branco" />
+                              <String fx:value="pane-components" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="169.0" text="Qtd Vagas disponíveis:">
+                                 <font>
+                                    <Font name="Calibri Light" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="45.0" prefHeight="17.0" prefWidth="169.0" text="Qtd Vagas ocupadas:">
+                                 <font>
+                                    <Font name="Calibri Light" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="72.0" prefHeight="17.0" prefWidth="169.0" text="Qtd pessoas sem vaga:">
+                                 <font>
+                                    <Font name="Calibri Light" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="102.0" prefHeight="17.0" prefWidth="169.0" text="Média de véiculos por pessoa:">
+                                 <font>
+                                    <Font name="Calibri Light" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="132.0" prefHeight="17.0" prefWidth="169.0" text="\% Vagas disponíveis:">
+                                 <font>
+                                    <Font name="Calibri Light" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="162.0" prefHeight="17.0" prefWidth="169.0" text="\% Vagas ocupadas">
+                                 <font>
+                                    <Font name="Calibri Light" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblQTDVagasDisponiveis" alignment="CENTER" layoutX="183.0" layoutY="14.0" prefHeight="17.0" prefWidth="107.0" text="0" />
+                              <Label fx:id="lblQTDVagasOcupadas" alignment="CENTER" layoutX="183.0" layoutY="45.0" prefHeight="17.0" prefWidth="107.0" text="0" />
+                              <Label fx:id="lblQTDPessoasSemVaga" alignment="CENTER" layoutX="183.0" layoutY="72.0" prefHeight="17.0" prefWidth="107.0" text="0" />
+                              <Label fx:id="lblMediaVeiculosPessoa" alignment="CENTER" layoutX="183.0" layoutY="102.0" prefHeight="17.0" prefWidth="107.0" text="0" />
+                              <Label fx:id="PercentualVagasDisponiveis" alignment="CENTER" layoutX="183.0" layoutY="132.0" prefHeight="17.0" prefWidth="107.0" text="0%" />
+                              <Label fx:id="percentualVagasOcupadas" alignment="CENTER" layoutX="183.0" layoutY="162.0" prefHeight="17.0" prefWidth="107.0" text="0%" />
+                              <Separator layoutX="14.0" layoutY="178.0" prefHeight="17.0" prefWidth="278.0" />
+                              <Label layoutX="14.0" layoutY="191.0" prefHeight="25.0" prefWidth="169.0" text="Total de vagas:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalvagas" alignment="CENTER" layoutX="183.0" layoutY="191.0" prefHeight="25.0" prefWidth="107.0" text="0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children></Pane>
+                     </children>
+                     <styleClass>
+                        <String fx:value="fundo-branco" />
+                        <String fx:value="pane-components" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Pane>
+               </children>
+            </HBox>
+            <TableView fx:id="gradeVagaMorador" onMouseClicked="#gradeVagaMoradorOnMouseClicked" prefHeight="242.0" prefWidth="1012.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="Id#" />
+                <TableColumn fx:id="colNomePessoa" prefWidth="350.0" text="Usuário da vaga" />
+                  <TableColumn fx:id="colVeiculo" prefWidth="284.0" text="Veículo" />
+                  <TableColumn fx:id="colVaga" prefWidth="88.0" text="Vaga" />
+                  <TableColumn fx:id="colSetor" prefWidth="103.0" text="Setor" />
+                  <TableColumn fx:id="colTipoVaga" prefWidth="99.0" text="Tipo Vaga" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/StyleBotoesMenu.css" />
+      <URL value="@../Style/StyleBorderPane.css" />
+      <URL value="@../Style/StyleComponents.css" />
+   </stylesheets>
+</AnchorPane>

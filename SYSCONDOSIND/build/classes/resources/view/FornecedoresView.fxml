@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="1032.0" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.FornecedoresViewController">
+   <children>
+      <VBox layoutX="25.0" layoutY="14.0" prefHeight="538.0" prefWidth="887.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="43.0" prefWidth="887.0" styleClass="hbox-menu">
+               <children>
+                  <HBox prefHeight="42.0" prefWidth="984.0" styleClass="hbox-menu">
+                     <children>
+                        <JFXButton fx:id="btnBuscar" onAction="#buscarOnAction" prefHeight="42.0" prefWidth="61.0" styleClass="button-topo" text="Buscar" />
+                        <JFXButton fx:id="btnNovo" layoutX="10.0" layoutY="10.0" onAction="#novoOnAction" prefHeight="42.0" prefWidth="61.0" styleClass="button-topo" text="Novo" />
+                        <JFXButton fx:id="btnEditar" layoutX="10.0" layoutY="10.0" onAction="#editarOnAction" prefHeight="42.0" prefWidth="61.0" styleClass="button-topo" text="Editar" />
+                        <JFXButton fx:id="btnSalvar" layoutX="71.0" layoutY="10.0" onAction="#salvarOnAction" prefHeight="42.0" prefWidth="61.0" styleClass="button-topo" text="Salvar" />
+                        <JFXButton fx:id="btnAlterar" layoutX="132.0" layoutY="10.0" onAction="#alterarOnAction" prefHeight="42.0" prefWidth="61.0" styleClass="button-topo" text="Alterar" />
+                        <JFXButton fx:id="btnExcluir" layoutX="193.0" layoutY="10.0" onAction="#excluirOnAction" prefHeight="42.0" prefWidth="61.0" styleClass="button-topo" text="Excluir" />
+                        <JFXButton fx:id="btnCancelar" layoutX="254.0" layoutY="10.0" onAction="#cancelarOnAction" prefHeight="42.0" prefWidth="67.0" styleClass="button-topo" text="Cancelar" />
+                        <JFXButton fx:id="btnLimpar" layoutX="315.0" layoutY="10.0" onAction="#limparOnaction" prefHeight="42.0" prefWidth="66.0" styleClass="button-topo" text="Limpar" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnSair" onAction="#sairOnAction" prefHeight="45.0" prefWidth="50.0" styleClass="button-sair" text="X" />
+               </children>
+            </HBox>
+            <JFXTabPane prefHeight="184.0" prefWidth="941.0">
+               <tabs>
+                  <Tab text="Cadastro">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="148.0" prefWidth="941.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtNomeFornecedor" editable="false" labelFloat="true" layoutX="14.0" layoutY="21.0" prefHeight="25.0" prefWidth="408.0" promptText="Nome Fornecedor" />
+                                    <JFXButton layoutX="432.0" layoutY="21.0" onAction="#buscaFornecedorOnAction" prefHeight="27.0" prefWidth="19.0">
+                                       <graphic>
+                                          <ImageView fitHeight="18.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></JFXButton>
+                                    <JFXComboBox fx:id="comboGrupoFornecedores" labelFloat="true" layoutX="503.0" layoutY="21.0" onAction="#grupoFornecedorOnAction" prefHeight="25.0" prefWidth="174.0" promptText="Grupo fornecedores" />
+                                    <JFXButton layoutX="684.0" layoutY="21.0" onAction="#buscaGrupoFornecedor" prefHeight="25.0" prefWidth="24.0">
+                                       <graphic>
+                                          <ImageView fitHeight="16.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></JFXButton>
+                                    <JFXComboBox fx:id="comboTipoFornecedor" labelFloat="true" layoutX="728.0" layoutY="21.0" prefHeight="25.0" prefWidth="201.0" promptText="Tipo fornecedor" />
+                                    <JFXButton layoutX="939.0" layoutY="21.0" onAction="#buscaTipoFornecedor" prefHeight="25.0" prefWidth="24.0">
+                                       <graphic>
+                                          <ImageView fitHeight="17.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></JFXButton>
+                                    <JFXComboBox fx:id="comboStatus" labelFloat="true" layoutX="14.0" layoutY="63.0" prefHeight="25.0" prefWidth="112.0" promptText="Status" />
+                                    <JFXTextField fx:id="txtTipoPessoa" editable="false" labelFloat="true" layoutX="138.0" layoutY="63.0" prefHeight="25.0" prefWidth="112.0" promptText="Tipo Pessoa" />
+                                    <JFXTextField fx:id="txtCPF_CNPJ" labelFloat="true" layoutX="261.0" layoutY="63.0" onKeyReleased="#cpf_cnpjOnKeyReleased" prefHeight="25.0" prefWidth="160.0" promptText="CPF / CNPJ" />
+                                    <JFXTextField fx:id="txtInscEstadual" labelFloat="true" layoutX="503.0" layoutY="63.0" prefHeight="25.0" prefWidth="174.0" promptText="Inscrição estadual" />
+                                    <JFXTextField fx:id="txtInscMunicipal" labelFloat="true" layoutX="728.0" layoutY="63.0" prefHeight="25.0" prefWidth="142.0" promptText="Inscrição Municipal" />
+                                    <JFXTextField fx:id="txtNomeRepresentante" labelFloat="true" layoutX="13.0" layoutY="105.0" prefHeight="25.0" prefWidth="408.0" promptText="Nome do representante" />
+                                    <JFXTextField fx:id="txtCustoMedioFrete" labelFloat="true" layoutX="728.0" layoutY="105.0" onKeyReleased="#custoFreteOnKeyReleased" prefHeight="25.0" prefWidth="142.0" promptText="Custo médio do frete" />
+                                    <JFXComboBox fx:id="comboPrazoPagamento" layoutX="503.0" layoutY="103.0" prefHeight="25.0" prefWidth="172.0" promptText="Prazo de pagamento" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="fundo-branco" />
+                                    <String fx:value="pane-components" />
+                                 </styleClass>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Observação">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="textObservacao" layoutX="14.0" layoutY="13.0" prefHeight="126.0" prefWidth="918.0" promptText="Observações do fornecedor" wrapText="true" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+            <TableView fx:id="gradeFornecedores" onMouseClicked="#gradeFornecedoresMouseClicked" prefHeight="132.0" prefWidth="941.0">
+              <columns>
+                <TableColumn fx:id="colIDFornededor" prefWidth="75.0" text="Id#" visible="false" />
+                <TableColumn fx:id="colNomeFornecedor" prefWidth="294.0" text="Fornecedor" />
+                  <TableColumn fx:id="colStatusFornecedor" minWidth="0.0" prefWidth="100.0" text="Status" />
+                  <TableColumn fx:id="colTipoPessoaFornecedor" prefWidth="125.0" text="Tipo Pessoa" />
+                  <TableColumn fx:id="colGrupoFornecedor" prefWidth="238.0" text="Grupo" />
+                  <TableColumn fx:id="colTipoFornecedorFornecedor" prefWidth="265.0" text="Tipo Fornecedor" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" />
+               </VBox.margin>
+            </TableView>
+            <Pane prefHeight="31.0" prefWidth="941.0">
+               <children>
+                  <JFXButton fx:id="btnCadastraEmail" disable="true" layoutX="6.0" layoutY="2.0" onAction="#cadastraEmailOnAction" prefHeight="25.0" prefWidth="172.0" styleClass="button-cad-auxiliar" text="Cadastrar E-mail" />
+                  <JFXButton fx:id="btnCadastraTelefone" disable="true" layoutX="538.0" layoutY="2.0" onAction="#cadastraTelefoneOnAction" prefHeight="25.0" prefWidth="172.0" styleClass="button-cad-auxiliar" text="Cadastrar Telefone" />
+               </children></Pane>
+            <HBox prefHeight="148.0" prefWidth="941.0">
+               <children>
+                  <TableView fx:id="gradeEmail" prefHeight="148.0" prefWidth="534.0">
+                    <columns>
+                      <TableColumn fx:id="colEmail" prefWidth="294.0" text="E-mail" />
+                      <TableColumn fx:id="colTipoEmailEmail" prefWidth="110.0" text="Tipo e-mail" />
+                        <TableColumn fx:id="colStatusEmail" prefWidth="126.0" text="Status" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" />
+                     </HBox.margin>
+                  </TableView>
+                  <TableView fx:id="gradeTelefone" prefHeight="146.0" prefWidth="490.0">
+                    <columns>
+                      <TableColumn fx:id="colDDDTelefone" prefWidth="62.0" text="DDD" />
+                      <TableColumn fx:id="colNumeroTelefone" prefWidth="178.0" text="N° Telefone" />
+                        <TableColumn fx:id="colRamalTelefone" prefWidth="95.0" text="Ramal" />
+                        <TableColumn fx:id="colTipoTelefone" prefWidth="149.0" text="Tipo telefone" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets bottom="2.0" right="2.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/StyleComponents.css" />
+      <URL value="@../Style/StyleBotoesMenu.css" />
+      <URL value="@../Style/StyleBorderPane.css" />
+   </stylesheets>
+</AnchorPane>

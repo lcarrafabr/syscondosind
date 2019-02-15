@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="795.0" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.FuncionariosVIEWController">
+   <children>
+      <VBox layoutX="307.0" layoutY="136.0" prefHeight="532.0" prefWidth="795.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="37.0" prefWidth="934.0" styleClass="hbox-menu">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="756.0" styleClass="hbox-menu">
+                     <children>
+                        <JFXButton fx:id="btnBuscar" onAction="#buscarOnAction" prefHeight="37.0" prefWidth="61.0" styleClass="button-topo" text="Buscar" />
+                        <JFXButton fx:id="btnNovo" layoutX="10.0" layoutY="10.0" onAction="#novoOnAction" prefHeight="37.0" prefWidth="61.0" styleClass="button-topo" text="Novo" />
+                        <JFXButton fx:id="btnEditar" layoutX="10.0" layoutY="10.0" onAction="#editarOnAction" prefHeight="37.0" prefWidth="61.0" styleClass="button-topo" text="Editar" />
+                        <JFXButton fx:id="btnSalvar" layoutX="71.0" layoutY="10.0" onAction="#salvarOnAction" prefHeight="37.0" prefWidth="61.0" styleClass="button-topo" text="Salvar" />
+                        <JFXButton fx:id="btnAlterar" layoutX="132.0" layoutY="10.0" onAction="#alterarOnAction" prefHeight="37.0" prefWidth="61.0" styleClass="button-topo" text="Alterar" />
+                        <JFXButton fx:id="btnExcluir" layoutX="193.0" layoutY="10.0" onAction="#excluirOnAction" prefHeight="37.0" prefWidth="61.0" styleClass="button-topo" text="Excluir" />
+                        <JFXButton fx:id="btnCancelar" layoutX="254.0" layoutY="10.0" onAction="#cancelarOnAction" prefHeight="37.0" prefWidth="68.0" styleClass="button-topo" text="Cancelar" />
+                        <JFXButton fx:id="btnLimpar" layoutX="315.0" layoutY="10.0" onAction="#limparOnAction" prefHeight="37.0" prefWidth="61.0" styleClass="button-topo" text="Limpar" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnSair" onAction="#sairOnAction" prefHeight="37.0" prefWidth="38.0" styleClass="button-sair" text="X" />
+               </children>
+            </HBox>
+            <Pane prefHeight="153.0" prefWidth="795.0" styleClass="pane-components">
+               <children>
+                  <JFXTextField fx:id="txtFuncionario" editable="false" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="383.0" promptText="Nome funcionário" />
+                  <JFXDatePicker fx:id="dateDataAdmissao" defaultColor="#2980b9" layoutX="413.0" layoutY="14.0" promptText="Data admissão" />
+                  <JFXDatePicker fx:id="dateDataDesligamento" defaultColor="#2980b9" layoutX="594.0" layoutY="14.0" promptText="Data desligamento" />
+                  <JFXComboBox fx:id="comboStatus" labelFloat="true" layoutX="14.0" layoutY="58.0" prefHeight="25.0" prefWidth="155.0" promptText="Status" />
+                  <JFXTextField fx:id="txtCarteiraDeTrabalho" labelFloat="true" layoutX="191.0" layoutY="58.0" prefHeight="25.0" prefWidth="206.0" promptText="Numero da carteira de trabalho" />
+                  <JFXComboBox fx:id="comboTipoFuncionario" labelFloat="true" layoutX="413.0" layoutY="58.0" prefHeight="25.0" prefWidth="171.0" promptText="Tipo funcionário" />
+                  <JFXTextField fx:id="txtProlabore" labelFloat="true" layoutX="594.0" layoutY="58.0" prefHeight="25.0" prefWidth="171.0" promptText="Valor prolabore" />
+                  <JFXTextField fx:id="txtHoraTrabalho" labelFloat="true" layoutX="14.0" layoutY="99.0" prefHeight="25.0" prefWidth="155.0" promptText="Horas de trabalho (Semanal)" />
+                  <JFXComboBox fx:id="comboCargo" labelFloat="true" layoutX="191.0" layoutY="99.0" prefHeight="25.0" prefWidth="206.0" promptText="Cargo" />
+                  <JFXToggleButton fx:id="btnPermissao" layoutX="413.0" layoutY="83.0" onAction="#permissaoOnAction" prefHeight="48.0" prefWidth="171.0" size="8.0" text="Permite abrir chamados" wrapText="true" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Pane>
+            <TableView fx:id="gradeFuncionarios" onMouseClicked="#gradeFuncionariosOnMouseClicked" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="Id" visible="false" />
+                <TableColumn fx:id="colFuncionario" prefWidth="358.0" text="Funcionário" />
+                  <TableColumn fx:id="colDataAdmissao" prefWidth="91.0" text="Data admissão" />
+                  <TableColumn fx:id="colDataDeslg" text="Data deslig." />
+                  <TableColumn fx:id="colTipoFuncionario" prefWidth="103.0" text="Tipo funcionário" />
+                  <TableColumn fx:id="colCargo" prefWidth="157.0" text="Cargo" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/StyleComponents.css" />
+      <URL value="@../Style/StyleBotoesMenu.css" />
+      <URL value="@../Style/StyleBorderPane.css" />
+   </stylesheets>
+</AnchorPane>

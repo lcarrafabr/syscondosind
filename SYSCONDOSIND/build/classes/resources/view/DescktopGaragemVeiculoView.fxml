@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="1055.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.syscondosind.controller.DescktopGaragemVeiculoViewController">
+   <children>
+      <Pane layoutX="38.0" layoutY="175.0" prefHeight="136.0" prefWidth="153.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+         <children>
+            <Label alignment="CENTER" layoutY="100.0" prefHeight="17.0" prefWidth="153.0" style="-fx-background-color: #cccccc;" text="Veículos" />
+            <ImageView fitHeight="99.0" fitWidth="153.0" pickOnBounds="true" preserveRatio="true" />
+            <FontAwesomeIconView fill="#a3a4b1" glyphName="CAR" layoutX="37.0" layoutY="87.0" size="70" />
+            <Button mnemonicParsing="false" onAction="#VeiculosOnAction" opacity="0.0" prefHeight="136.0" prefWidth="153.0" text="Button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="208.0" layoutY="175.0" prefHeight="136.0" prefWidth="153.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+         <children>
+            <Label alignment="CENTER" layoutY="100.0" prefHeight="17.0" prefWidth="153.0" style="-fx-background-color: #cccccc;" text="Gerenciador de vagas" />
+            <ImageView fitHeight="99.0" fitWidth="153.0" pickOnBounds="true" preserveRatio="true" />
+            <FontAwesomeIconView fill="#a3a4b1" glyphName="ARROWS" layoutX="42.0" layoutY="87.0" size="70" />
+            <Button mnemonicParsing="false" onAction="#garagemMoradorOnAction" opacity="0.0" prefHeight="136.0" prefWidth="153.0" text="Button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <HBox layoutY="363.0" prefHeight="60.0" prefWidth="1055.0" style="-fx-background-color: #ffffff; -fx-border-color: #B0C4DE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#setoresGaragemOnAction" prefHeight="68.0" prefWidth="92.0" text="Setores Garagem" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton layoutX="11.0" layoutY="11.0" onAction="#vagasGaragemOnAction" prefHeight="68.0" prefWidth="92.0" text="Vagas de garagem" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton layoutX="11.0" layoutY="11.0" prefHeight="68.0" prefWidth="92.0" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton layoutX="103.0" layoutY="11.0" prefHeight="68.0" prefWidth="92.0" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton layoutX="195.0" layoutY="11.0" prefHeight="68.0" prefWidth="92.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton layoutX="287.0" layoutY="11.0" prefHeight="68.0" prefWidth="92.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton layoutX="379.0" layoutY="11.0" prefHeight="68.0" prefWidth="92.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton layoutX="471.0" layoutY="11.0" prefHeight="68.0" prefWidth="92.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+/*
+Style usado para os componentes do desktop
+*/
+/* 
+    Created on : 13/07/2018, 21:03:14
+    Author     : Luciano Carrafa Benfica
+*/
+.menu-bar { /* The menu bar itself */
+    /*-fx-text-fill: #ffffff;*/
+}
+.menu { /* The File menu item */ 
+    /*-fx-text-fill: #ffffff;*/
+}
+.menu:showing { /* menu when it's being shown (activated) */ 
+    /*-fx-text-fill: #ffffff;*/
+}
+.menu .label { /* Styles the text on a menu item */
+    -fx-text-fill: #ffffff;
+}
+.menu:showing .label { /* Styles the text on a menu item when activated */ 
+    -fx-text-fill: #131B23;
+}
+
